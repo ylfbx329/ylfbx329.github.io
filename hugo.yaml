@@ -1,0 +1,161 @@
+baseURL: https://ylfbx329.github.io
+languageCode: zh
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: true
+title: 叶落归处
+theme: ["PaperMod"]
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts", "papermod"]
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+#hugo参数设置
+menus:
+  main:
+    - name: 博文
+      pageRef: /
+      weight: 10
+    - name: 归档
+      pageRef: archives
+      weight: 20
+    - name: 搜索
+      pageRef: search
+      weight: 30
+    - name: 关于
+      pageRef: profile
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "叶落归处，清风拂涟漪"
+  author: "叶都安"
+  # author: ["叶涟风不息", "都安"] # multiple authors
+  keywords: ["高效", "认真", "专业"]
+  dateFormat: "2006年1月2日"
+  defaultTheme: auto
+  # disableThemeToggle: true
+  # ShowShareButtons: true # 启用博文底部分享按钮
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowLastMod: true # 显示文章更新时间
+  ShowToc: true
+  comments: true # 显示评论
+  images: ["images/papermod-cover.png"]
+  math: true # 全局启用KaTeX解析公式
+  profileMode:
+    enabled: false
+    title: 叶涟风不息 & 都安
+    subtitle: 叶落风清
+    imageUrl: "叶子.jpg"
+    imageTitle: my image
+    # imageWidth: 120
+    # imageHeight: 120
+    # buttons:
+    # - name: Archives
+    # url: /archives
+    # - name: Tags
+    # url: /tags
+
+  homeInfoParams:
+    Title: "欢迎光临——叶落归处"
+    Content: "落叶归处，方知本我"
+
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/ylfbx329"
+
+  # editPost:
+  #   URL: "https://github.com/ylfbx329/ylfbx329.github.io/tree/master/content"
+  #   Text: "修改" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+
+  # label:
+  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+  # text: "Home"
+  # icon: icon.png
+  # iconHeight: 35
+
+  # analytics:
+  #     google:
+  #         SiteVerificationTag: "XYZabc"
+
+  assets:
+    disableHLJS: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  # cover:
+  #     hidden: true # hide everywhere but not in structured data
+  #     hiddenInList: true # hide on list pages and home
+  #     hiddenInSingle: true # hide on single page
+
+  # fuseOpts:
+  #     isCaseSensitive: false
+  #     shouldSort: true
+  #     location: 0
+  #     distance: 1000
+  #     threshold: 0.4
+  #     minMatchCharLength: 0
+  #     keys: ["title", "permalink", "summary", "content"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
+# privacy:
+#   vimeo:
+#     disabled: false
+#     simple: true
+
+#   twitter:
+#     disabled: false
+#     enableDNT: true
+#     simple: true
+
+#   instagram:
+#     disabled: false
+#     simple: true
+
+#   youtube:
+#     disabled: false
+#     privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
