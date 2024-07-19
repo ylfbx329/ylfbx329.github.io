@@ -12,7 +12,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
+mainsections: ["posts"] # 指定显示content目录下的section
 
 minify:
   disableXML: true
@@ -34,6 +34,7 @@ menus:
       pageRef: profile
       weight: 40
 
+# 搜索页配置
 outputs:
   home:
     - HTML
@@ -42,34 +43,35 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "叶落归处，清风拂涟漪"
-  author: "叶都安"
+  description: 叶落归处，清风拂涟漪
+  author: 叶都安
   # author: ["叶涟风不息", "都安"] # multiple authors
   keywords: ["高效", "认真", "专业"]
-  dateFormat: "2006年1月2日"
-  defaultTheme: auto
-  # disableThemeToggle: true
+  dateFormat: 2006年1月2日
+  defaultTheme: auto # 根据浏览器和系统切换昼夜主题
+  # disableThemeToggle: true # 禁用昼夜主题切换按钮
   # ShowShareButtons: true # 启用博文底部分享按钮
-  ShowReadingTime: true
+  ShowReadingTime: true # 显示阅读时间估计（分钟）
   # disableSpecial1stPost: true
   displayFullLangName: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true # 底部显示上/下一篇博文跳转链接
+  ShowBreadCrumbs: true # 面包屑导航
+  ShowCodeCopyButtons: true # 显示代码复制按钮
   ShowRssButtonInSectionTermList: true
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowLastMod: true # 显示文章更新时间
-  ShowToc: true
-  comments: true # 显示评论
+  ShowToc: true # 博文页面显示目录
+  # TocOpen: true # 博文目录默认展开
+  # comments: true # 启用评论
   images: ["images/papermod-cover.png"]
   math: true # 全局启用KaTeX解析公式
   profileMode:
     enabled: false
     title: 叶涟风不息 & 都安
     subtitle: 叶落风清
-    imageUrl: "叶子.jpg"
-    imageTitle: my image
+    imageUrl: 叶子.jpg
+    imageTitle: 叶涟风不息 & 都安
     # imageWidth: 120
     # imageHeight: 120
     # buttons:
@@ -79,14 +81,18 @@ params:
     # url: /tags
 
   homeInfoParams:
-    Title: "欢迎光临——叶落归处"
-    Content: "落叶归处，方知本我"
+    Title: 欢迎光临——叶落归处
+    Content: 落叶归处，方知本我
 
   socialIcons:
     - name: github
       title: GitHub
-      url: "https://github.com/ylfbx329"
+      url: https://github.com/ylfbx329
+    - name: bilibili
+      title: bilibili
+      url: https://space.bilibili.com/38709472
 
+  # 编辑博文跳转链接
   # editPost:
   #   URL: "https://github.com/ylfbx329/ylfbx329.github.io/tree/master/content"
   #   Text: "修改" # edit text
@@ -104,17 +110,20 @@ params:
 
   assets:
     disableHLJS: true
+    # 网站图标配置
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
     favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
+    disableFingerprinting: true # 修复Failed to find a valid digest in the 'integrity' attribute for resource
 
   # cover:
   #     hidden: true # hide everywhere but not in structured data
   #     hiddenInList: true # hide on list pages and home
   #     hiddenInSingle: true # hide on single page
 
+  # 搜索自定义配置
   # fuseOpts:
   #     isCaseSensitive: false
   #     shouldSort: true
