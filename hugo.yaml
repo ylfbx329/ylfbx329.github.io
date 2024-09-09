@@ -1,7 +1,10 @@
 baseURL: https://ylfbx329.github.io
-languageCode: zh
+
+# 语言设置
+# languageCode: zh # 设置语言键填充值
 defaultContentLanguage: zh
-defaultContentLanguageInSubdir: true
+# defaultContentLanguageInSubdir: true
+
 title: 叶落归处
 theme: ["PaperMod"]
 
@@ -24,15 +27,18 @@ menus:
     - name: 博文
       pageRef: /
       weight: 10
-    - name: 归档
-      pageRef: archives
+    - name: 分类
+      pageRef: /categories
       weight: 20
-    - name: 搜索
-      pageRef: search
+    - name: 归档
+      pageRef: /archives
       weight: 30
-    - name: 关于
-      pageRef: profile
+    - name: 搜索
+      pageRef: /search
       weight: 40
+    - name: 关于
+      pageRef: /profile
+      weight: 50
 
 # 搜索页配置
 outputs:
@@ -43,7 +49,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: 叶落归处，清风拂涟漪
+  description: 叶落归处，清风自来
   author: 叶都安
   # author: ["叶涟风不息", "都安"] # multiple authors
   keywords: ["高效", "认真", "专业"]
@@ -69,7 +75,7 @@ params:
   profileMode:
     enabled: false
     title: 叶涟风不息 & 都安
-    subtitle: 叶落风清
+    subtitle: 叶落归处，清风自来
     imageUrl: 叶子.jpg
     imageTitle: 叶涟风不息 & 都安
     # imageWidth: 120
@@ -134,9 +140,10 @@ params:
   #     keys: ["title", "permalink", "summary", "content"]
 
 markup:
-  goldmark:
+  goldmark: # Hugo默认Markdown渲染库
     renderer:
       unsafe: true
+      hardWraps: true # 渲染器渲染硬换行
   highlight:
     noClasses: false
     # anchorLineNos: true
@@ -168,3 +175,7 @@ services:
     disableInlineCSS: true
   twitter:
     disableInlineCSS: true
+
+taxonomies:
+  category: categories
+  # tag: tags

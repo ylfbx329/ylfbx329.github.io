@@ -2,6 +2,7 @@
 title: "Java笔记"
 summary: 记录Java学习过程中的部分要点
 date: 2022-01-19T20:17:58+08:00
+categories: 笔记
 # draft: true
 ---
 # 第一章 Java 语言概述

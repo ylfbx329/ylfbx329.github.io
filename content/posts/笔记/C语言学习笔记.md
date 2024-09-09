@@ -2,6 +2,7 @@
 title: "C语言学习笔记"
 summary: 记录C语言学习过程中的部分要点
 date: 2021-06-05T11:23:40+08:00
+categories: 笔记
 # draft: true
 ---
 
