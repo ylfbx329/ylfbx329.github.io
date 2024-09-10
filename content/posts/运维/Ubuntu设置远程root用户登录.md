@@ -1,6 +1,6 @@
 ---
-title: 'Ubuntu设置远程root用户登录'
-summary: Ubuntu设置远程root用户登录
+title: 'Ubuntu 设置远程 root 用户登录'
+summary: Ubuntu 设置远程 root 用户登录方法记录
 date: 2023-09-20T12:42:22+08:00
 categories: 运维
 # draft: true

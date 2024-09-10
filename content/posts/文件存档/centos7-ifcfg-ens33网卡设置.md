@@ -1,11 +1,11 @@
 ---
-title: 'Centos7 Ifcfg-Ens33网卡设置'
-summary: Centos7 Ifcfg-Ens33网卡设置
+title: 'CentOS 7 ifcfg-ens33 网卡配置文件'
+summary: CentOS 7 ifcfg-ens33 网卡配置文件存档，虚拟机使用
 date: 2023-01-28T11:03:10+08:00
 categories: 文件存档
 # draft: true
 ---
-```
+```bash
 TYPE=Ethernet
 PROXY_METHOD=none
 BROWSER_ONLY=no

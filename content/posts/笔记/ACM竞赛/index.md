@@ -1,6 +1,6 @@
 ---
-title: 'ACM笔记'
-summary: ACM竞赛学习笔记
+title: 'ACM竞赛笔记'
+summary: ACM竞赛学习记录
 date: 2022-03-09T09:47:51+08:00
 categories: 笔记
 # draft: true

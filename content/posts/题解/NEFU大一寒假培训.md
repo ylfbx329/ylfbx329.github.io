@@ -1,12 +1,10 @@
 ---
 title: 'NEFU 大一寒假培训'
-summary: ACM竞赛练习记录
+summary: NEFU 大一寒假ACM竞赛培训，题解记录
 date: 2020-12-24T12:38:45+08:00
-categories: 笔记
+categories: 题解
 # draft: true
 ---
-
-
 ## 主题：二维数组、结构体
 
 ### A 二维矩阵对角线和

@@ -1,8 +1,8 @@
 ---
 title: 'CentOS 7 虚拟机 Hadoop 集群环境搭建'
-summary: CentOS 7 虚拟机 Hadoop 集群环境搭建
+summary: CentOS 7 虚拟机 Hadoop 集群环境搭建流程详细教程
 date: 2022-09-18T10:15:30+08:00
-categories: 未分类
+categories: 运维
 # draft: true
 ---
 

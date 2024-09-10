@@ -1,6 +1,6 @@
 ---
-title: "Java笔记"
-summary: 记录Java学习过程中的部分要点
+title: "Java课程笔记"
+summary: Java学习记录，包含：第一章 Java 语言概述、第二章 Java 编程基础、第三章 类和对象、第四章 抽象类与接口、第五章 常用类、第六章 异常处理、第七章 多线程、第八章 输入输出
 date: 2022-01-19T20:17:58+08:00
 categories: 笔记
 # draft: true
@@ -94,7 +94,7 @@ MyEclipse
 
 ## Java 项目文件目录
 
-![项目文件目录](https://img-blog.csdnimg.cn/93dc3deabfd84cea849a9b27091e5779.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAbmVmdV_lj7bmtp_po47kuI3mga8=,size_7,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![项目文件目录](./imgs/项目文件目录.png)
 
 # 第二章 Java 编程基础
 
@@ -168,10 +168,10 @@ MyEclipse
 1. java.util.Scanner 类
 2. 创建 `Scanner input = new Scanner(System.in);`
 3. 常用方法
-   1. 读取数据![读取](https://img-blog.csdnimg.cn/7f9a5b7360c6439683175519cd97d98e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAbmVmdV_lj7bmtp_po47kuI3mga8=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+   1. 读取数据![读取](./imgs/scanner读取.png)
       **注：`next()`输入有效字符之前遇到的空白会被自动去掉，读取到有效字符之后遇空白结束**
       **`nextLien()`读取整行结束**
-   2. 判断数据（只判断，不消耗输入）![判断](https://img-blog.csdnimg.cn/dca6b562469e44ac9cc1192687235c80.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAbmVmdV_lj7bmtp_po47kuI3mga8=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+   2. 判断数据（只判断，不消耗输入）![判断](./imgs/scanner判断.png)
 
 ## 分支语句
 
@@ -513,7 +513,7 @@ MyEclipse
 
 ## Collection Frameworks
 
-1. 集合框架：表示和操作集合的体系结构，包含接口、实现和算法![在这里插入图片描述](https://img-blog.csdnimg.cn/02c5d9eace234faa93f00ff127fbf95f.png#pic_center)
+1. 集合框架：表示和操作集合的体系结构，包含接口、实现和算法![Collection Frameworks](./imgs/Collection%20Frameworks.png)
 2. 泛型 `<E>`
    1. 设计时不关心具体类型，实现时具体化为某一引用类型
    2. 优点：安全方便

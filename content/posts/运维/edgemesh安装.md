@@ -1,6 +1,6 @@
 ---
-title: 'Edgemesh安装'
-summary: Edgemesh安装
+title: 'Edgemesh 安装'
+summary: Edgemesh 安装详细教程
 date: 2023-01-21T11:02:09+08:00
 categories: 运维
 # draft: true

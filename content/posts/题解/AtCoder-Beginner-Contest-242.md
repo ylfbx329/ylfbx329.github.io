@@ -1,8 +1,8 @@
 ---
 title: 'AtCoder Beginner Contest 242'
-summary: 比赛题目记录
+summary: AtCoder Beginner Contest 242题解记录
 date: 2022-03-11T09:51:37+08:00
-categories: 未分类
+categories: 题解
 # draft: true
 ---
 # AtCoder Beginner Contest 242

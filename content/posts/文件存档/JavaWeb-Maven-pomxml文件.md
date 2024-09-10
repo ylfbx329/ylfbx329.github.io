@@ -1,8 +1,8 @@
 ---
-title: 'JavaWeb Maven pom.xml文件'
-summary: JavaWeb Maven pom.xml文件
+title: 'Java Web Maven pom.xml文件'
+summary: Java Web Maven pom.xml文件存档
 date: 2022-11-02T10:26:41+08:00
-categories: 未分类
+categories: 文件存档
 # draft: true
 ---
 

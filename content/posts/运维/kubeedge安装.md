@@ -1,6 +1,6 @@
 ---
-title: 'Kubeedge安装'
-summary: Kubeedge安装
+title: 'Kubeedge 安装'
+summary: Kubeedge 安装详细教程
 date: 2023-01-21T10:56:29+08:00
 categories: 运维
 # draft: true

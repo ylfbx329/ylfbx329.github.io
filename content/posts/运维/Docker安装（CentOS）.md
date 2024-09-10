@@ -1,6 +1,6 @@
 ---
-title: 'Docker安装（CentOS）'
-summary: Docker安装（CentOS）
+title: 'Docker 安装（CentOS）'
+summary: 在 CentOS 上安装 Docker
 date: 2023-01-09T10:54:14+08:00
 categories: 运维
 # draft: true

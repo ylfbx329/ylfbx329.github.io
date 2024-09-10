@@ -1,6 +1,6 @@
 ---
-title: 'Java Web笔记'
-summary: Java Web笔记
+title: 'Java Web课程笔记'
+summary: Java Web学习记录，包含：第一章 Java Web概述、第二章 HTML CSS、第三章 JavaScript、第四章 Jquery、第五章 JSP、第六章 JDBC、第七章 JavaBean Servlet
 date: 2022-12-18T10:51:54+08:00
 categories: 笔记
 # draft: true

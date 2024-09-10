@@ -1,6 +1,6 @@
 ---
 title: 'K8s 部署（CentOS）'
-summary: K8s 部署（CentOS）
+summary: 在 CentOS 上部署 K8s
 date: 2023-01-13T10:55:37+08:00
 categories: 运维
 # draft: true

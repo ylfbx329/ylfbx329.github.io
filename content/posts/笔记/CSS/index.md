@@ -1,6 +1,6 @@
 ---
-title: 'CSS笔记'
-summary: CSS笔记
+title: 'CSS学习笔记'
+summary: CSS学习记录，主要为《Pink老师前端》课程内容
 date: 2022-09-13T10:14:29+08:00
 categories: 笔记
 # draft: true

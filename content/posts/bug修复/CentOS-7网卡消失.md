@@ -1,8 +1,8 @@
 ---
 title: 'CentOS 7 网卡消失'
-summary: 解决CentOS 7 网卡消失
+summary: 解决 CentOS 7 网卡消失问题
 date: 2022-09-08T10:12:22+08:00
-categories: 未分类
+categories: bug修复
 # draft: true
 ---
 在 root 权限下按顺序执行以下代码

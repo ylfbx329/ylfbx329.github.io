@@ -1,6 +1,6 @@
 ---
-title: '微信小程序笔记'
-summary: 学习微信小程序制作时的笔记记录
+title: '微信小程序学习笔记'
+summary: 微信小程序学习记录
 date: 2022-01-05T04:48:17+08:00
 categories: 笔记
 # draft: true
@@ -9,7 +9,7 @@ categories: 笔记
 
 ## 项目文件目录
 
-![项目目录](https://i-blog.csdnimg.cn/blog_migrate/bac5def7bbca53f822a892a2856bcede.png#pic_center)
+![项目目录](./imgs/项目目录.png)
 
 - `cloudfunctions` 云函数文件夹
 - `miniprogram` 小程序文件夹（主要）
@@ -23,7 +23,7 @@ categories: 笔记
 ## pages 页面文件夹
 
 创建 `index` 主页面
-![index页面文件](https://i-blog.csdnimg.cn/blog_migrate/228351a0e5e1c44637b48046caef6afc.png#pic_center)
+![index页面文件](./imgs/index页面文件.png)
 `json` 配置文件，功能实现
 `wxml` 页面内容
 `wxss` 页面样式，针对标签调整样式
@@ -271,6 +271,6 @@ boo: true
 
 ## 效果展示
 
-![不同标签效果展示](https://i-blog.csdnimg.cn/blog_migrate/5da20ceac0d81f8cc353e5f0d362c9c1.png#pic_center)
-![三种布局展示](https://i-blog.csdnimg.cn/blog_migrate/edd1dbedd764894e4c82c39d69a64239.png#pic_center)
-![变量引用展示](https://i-blog.csdnimg.cn/blog_migrate/072f849b020be2209f759d83993374bb.png#pic_center)
+![不同标签效果展示](./imgs/不同标签效果展示.png)
+![三种布局展示](./imgs/三种布局展示.png)
+![变量引用展示](./imgs/变量引用展示.png)

@@ -1,6 +1,6 @@
 ---
-title: 'HTML笔记'
-summary: HTML笔记记录
+title: 'HTML学习笔记'
+summary: HTML学习记录，主要为《Pink老师前端》课程内容
 date: 2022-08-03T10:09:01+08:00
 categories: 笔记
 # draft: true

@@ -1,17 +1,18 @@
 ---
-title: 'Javaweb编码过滤器无效'
-summary: 解决Javaweb编码过滤器无效
+title: 'Java Web 编码过滤器无效'
+summary: 解决 Java Web 编码过滤器无效问题
 date: 2022-10-31T10:17:25+08:00
-categories: 未分类
+categories: bug修复
 # draft: true
 ---
 # 问题描述
 
 某一页面乱码
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d532bcd88883eb46f664150a07fc333e.png)
+![页面乱码](./imgs/页面乱码.png)
 项目目录结构
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/65089237450d4e97d127587b292d16ce.png)
-CharacterEncodingFilter.java
+![项目结构](./imgs/项目结构.png)
+
+字符编码过滤器 CharacterEncodingFilter.java
 
 ```java
 package com.edu.nefu.filter;

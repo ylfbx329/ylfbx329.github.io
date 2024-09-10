@@ -1,8 +1,8 @@
 ---
 title: 'Java期末复习编程题'
-summary: 复习题目记录
+summary: Java期末复习编程题，题目题解，学习记录
 date: 2022-05-31T09:53:04+08:00
-categories: 未分类
+categories: 学习记录
 # draft: true
 ---
 # Java 期末复习-编程题

@@ -1,6 +1,6 @@
 ---
 title: 'C语言课程设计'
-summary: 进行C语言课程设计时的学习记录
+summary: C语言课程设计学习记录
 date: 2021-06-22T01:00:43+08:00
 categories: 学习记录
 # draft: true
