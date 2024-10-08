@@ -27,18 +27,21 @@ menus:
     - name: 博文
       pageRef: /
       weight: 10
+    - name: 日记
+      pageRef: /diary
+      weight: 20
     - name: 分类
       pageRef: /categories
-      weight: 20
+      weight: 30
     - name: 归档
       pageRef: /archives
-      weight: 30
+      weight: 40
     - name: 搜索
       pageRef: /search
-      weight: 40
+      weight: 50
     - name: 关于
       pageRef: /profile
-      weight: 50
+      weight: 60
 
 # 搜索页配置
 outputs:
