@@ -6,10 +6,3 @@
 {{ else }}
   <img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
 {{ end }}
-
-<style>
-    .post-content figure > figcaption {
-      margin: 0 0 16px;
-      text-align: center;
-    }
-</style>
