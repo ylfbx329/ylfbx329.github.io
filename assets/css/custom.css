@@ -1,0 +1,5 @@
+/* 美化文字选中效果 */
+::selection {
+  background-color: #cce7c9; /* 浅绿色背景 */
+  color: #333333; /* 选中文本颜色 */
+}

@@ -7,8 +7,21 @@
 
 <head>
     {{- partial "head.html" . }}
-    {{ $customCSS := resources.Get "css/render-image.css" | css.Sass | resources.Minify }}
-    <link rel="stylesheet" href="{{ $customCSS.Permalink }}">
+
+    <!-- 自动扫描自定义css样式并链接 -->
+    {{ $cssFiles := resources.Match "css/*.{css,scss}" }}
+    {{ $processedCSS := slice }}
+
+    {{ range $cssFiles }}
+        {{ if eq (path.Ext .RelPermalink) ".scss" }}
+            {{ $processedCSS = $processedCSS | append ( . | toCSS | resources.Minify ) }}
+        {{ else }}
+            {{ $processedCSS = $processedCSS | append ( . | resources.Minify ) }}
+        {{ end }}
+    {{ end }}
+
+    {{ $mergedCSS := $processedCSS | resources.Concat "css/all-styles.css" }}
+    <link rel="stylesheet" href="{{ $mergedCSS.Permalink }}">
 </head>
 
 <body class="
