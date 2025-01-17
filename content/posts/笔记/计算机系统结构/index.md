@@ -3,6 +3,9 @@ title: '计算机系统结构课程笔记'
 summary: 计算机系统结构课程学习记录，包括：第一章 计算机系统结构基本概念、第二章 数据表示与指令系统、第三章 流水线技术、第四章 存储系统、第六章 多处理机概述
 date: 2023-04-09T11:04:30+08:00
 categories: 笔记
+cover:
+  image: imgs/Flynn分类法.png
+  relative: true
 # draft: true
 ---
 # 第一章 计算机系统结构基本概念
@@ -54,7 +57,9 @@ categories: 笔记
     - PU：处理部件
     - MM、SM：存储器
 
-![Flynn分类法](./imgs//Flynn分类法.png)
+![Flynn分类法](./imgs/Flynn分类法.png)
+
+![第一章单片机概述](./imgs/第一章单片机概述.png)
 
 - 冯氏分类法
   - 分类标准：最大并行度

@@ -1,34 +1,27 @@
-# [hugo] 您发布的网站的绝对 URL（协议、主机、路径和尾随斜杠）（e.g., https://www.example.org/docs/）
-baseURL: https://ylfbx329.github.io/
-# [hugo] 网站标题
-title: 叶落归处
-# [hugo] 网站主题，格式暂时不明（详见：https://gohugo.io/getting-started/configuration/#theme）
-theme: [ "PaperMod" ]
+baseURL: https://ylfbx329.github.io
 
-# [hugo] RFC 5646 定义的语言标签，用于填充
-# languageCode: zh
-# [hugo] 没有语言指示的内容将默认使用此语言，默认：en
+# 语言设置
+# languageCode: zh # 设置语言键填充值
 defaultContentLanguage: zh
+# defaultContentLanguageInSubdir: true
 
-# [unknown] 主页每页显示的博文数，控制分页，未找到相关文档
-paginate: 20
-
-# [hugo] 启用 robots.txt 文件的生成，默认：false
-enableRobotsTXT: true
-# [hugo] 为页面内容启用 Emoji 表情符号支持，默认：false
-enableEmoji: true
-
-# [hugo] 最小化网页代码的相关设置，详见https://gohugo.io/getting-started/configuration/#minify
-# minify:
-  # disableXML: true
-  # minifyOutput: true
+title: 叶落归处
+theme: ["hugo-theme-stack"]
 
 enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
 pygmentsUseClasses: true
-# 指定显示 content 目录下的 section
-mainsections: [ "posts" ]
+mainsections: ["posts"] # 指定显示content目录下的section
 
-# hugo参数设置
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+#hugo参数设置
 menus:
   main:
     - name: 博文
@@ -58,39 +51,29 @@ outputs:
     - JSON
 
 params:
-  # [PaperMod] 将环境设置为生产，启用 google analytics、opengraph、twitter-cards 和 schema
-  env: production
-  # [PaperMod] 网站描述
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: 叶落归处，清风自来
-  # [PaperMod] 网站作者
   author: 叶都安
-  # [PaperMod] 首页关键字
-  keywords: [ 高效, 认真, 专业 ]
-  # [PaperMod] 网站中日期字符串的格式。
+  # author: ["叶涟风不息", "都安"] # multiple authors
+  keywords: ["高效", "认真", "专业"]
   dateFormat: 2006年1月2日
-  # [PaperMod] 设置昼夜主题，auto: 根据浏览器和系统
-  defaultTheme: auto
-  # [PaperMod] 在博文元数据中显示阅读时间
-  ShowReadingTime: true
-  # [PaperMod] 显示博文下方的分享按钮
-  ShowShareButtons: true
+  defaultTheme: auto # 根据浏览器和系统切换昼夜主题
+  # disableThemeToggle: true # 禁用昼夜主题切换按钮
+  # ShowShareButtons: true # 启用博文底部分享按钮
+  ShowReadingTime: true # 显示阅读时间估计（分钟）
   # disableSpecial1stPost: true
   displayFullLangName: true
-  # [PaperMod] 底部显示上/下一篇博文跳转链接
-  ShowPostNavLinks: true
-  # [PaperMod] 显示面包屑导航
-  ShowBreadCrumbs: true
-  # [PaperMod] 显示代码复制按钮
-  ShowCodeCopyButtons: true
-  # [PaperMod] 在章节、术语和列表页面中显示 RSS 图标
+  ShowPostNavLinks: true # 底部显示上/下一篇博文跳转链接
+  ShowBreadCrumbs: true # 面包屑导航
+  ShowCodeCopyButtons: true # 显示代码复制按钮
   ShowRssButtonInSectionTermList: true
   ShowAllPagesInArchive: true
   ShowPageNums: true
-  # 显示文章更新时间
-  ShowLastMod: true
-  # [PaperMod] 显示文章目录
-  ShowToc: true
+  ShowLastMod: true # 显示文章更新时间
+  ShowToc: true # 博文页面显示目录
+  # TocOpen: true # 博文目录默认展开
   # comments: true # 启用评论
+  images: ["images/papermod-cover.png"]
   math: true # 全局启用KaTeX解析公式
   profileMode:
     enabled: false
