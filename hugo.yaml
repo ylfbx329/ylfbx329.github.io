@@ -74,7 +74,7 @@ params:
   ShowReadingTime: true
   # [PaperMod] 显示博文下方的分享按钮
   ShowShareButtons: true
-  # disableSpecial1stPost: true
+  # [PaperMod] 在语言切换标题中的语言下显示语言名称
   displayFullLangName: true
   # [PaperMod] 底部显示上/下一篇博文跳转链接
   ShowPostNavLinks: true
@@ -86,12 +86,14 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowAllPagesInArchive: true
   ShowPageNums: true
-  # 显示文章更新时间
+  # [unknown] 显示文章更新时间
   ShowLastMod: true
   # [PaperMod] 显示文章目录
   ShowToc: true
-  # comments: true # 启用评论
-  math: true # 全局启用KaTeX解析公式
+  # [PaperMod] 启用评论
+  comments: true
+  # [unknown] 全局启用KaTeX解析公式
+  math: true
   profileMode:
     enabled: false
     title: 叶涟风不息 & 都安

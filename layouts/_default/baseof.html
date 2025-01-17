@@ -17,7 +17,7 @@
             {{- $processedCSS = $processedCSS | append ( . | resources.Minify ) }}
         {{- end }}
     {{- end }}
-    {{- $mergedCSS := $processedCSS | resources.Concat "css/all-custom-styles.css" }}
+    {{- $mergedCSS := $processedCSS | resources.Concat "css/all-styles.css" }}
     <link rel="stylesheet" href="{{ $mergedCSS.Permalink }}">
 </head>
 
@@ -34,14 +34,6 @@
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
-    <!-- 自动扫描自定义 JS 脚本并链接 -->
-    {{ $jsFiles := resources.Match "js/*.js" }}
-    {{ $processedJS := slice }}
-    {{ range $jsFiles }}
-        {{ $processedJS = $processedJS | append ( . | resources.Minify ) }}
-    {{ end }}
-    {{ $mergedJS := $processedJS | resources.Concat "js/all-custom-scripts.js" }}
-    <script src="{{ $jsFiles }}" type="module" defer></script>
 </body>
 
 </html>
