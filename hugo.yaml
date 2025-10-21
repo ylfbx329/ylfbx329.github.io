@@ -1,42 +1,25 @@
+# 最小化配置
+
 # [hugo] 您发布的网站的绝对 URL（协议、主机、路径和尾随斜杠）（e.g., https://www.example.org/docs/）
 baseURL: https://ylfbx329.github.io/
+# [hugo] RFC 5646 定义的语言标签，用于填充
+languageCode: zh-cn
+# [hugo] 没有语言指示的内容将默认使用此语言，默认：en
+defaultContentLanguage: zh
 # [hugo] 网站标题
-title: 叶落归处
+title: 叶子的博客
 # [hugo] 网站主题，格式暂时不明（详见：https://gohugo.io/getting-started/configuration/#theme）
 theme: [ "PaperMod" ]
 
-# [hugo] RFC 5646 定义的语言标签，用于填充
-# languageCode: zh
-# [hugo] 没有语言指示的内容将默认使用此语言，默认：en
-defaultContentLanguage: zh
-
-# [unknown] 主页每页显示的博文数，控制分页，未找到相关文档
-paginate: 20
-
-# [hugo] 启用 robots.txt 文件的生成，默认：false
-enableRobotsTXT: true
-# [hugo] 为页面内容启用 Emoji 表情符号支持，默认：false
-enableEmoji: true
-
-# [hugo] 最小化网页代码的相关设置，详见https://gohugo.io/getting-started/configuration/#minify
-# minify:
-  # disableXML: true
-  # minifyOutput: true
-
-enableInlineShortcodes: true
-pygmentsUseClasses: true
-# 指定显示 content 目录下的 section
-mainsections: [ "posts" ]
-
-# hugo参数设置
+# [hugo] 菜单设置
 menus:
   main:
     - name: 博文
       pageRef: /
       weight: 10
-    - name: 日记
-      pageRef: /diary
-      weight: 20
+    # - name: 日记
+    #   pageRef: /diary
+    #   weight: 20
     - name: 分类
       pageRef: /categories
       weight: 30
@@ -50,154 +33,108 @@ menus:
       pageRef: /profile
       weight: 60
 
-# 搜索页配置
+# [hugo] 用于配置搜索页
 outputs:
   home:
-    - HTML
-    - RSS
-    - JSON
+    - html
+    - rss
+    - json
 
 params:
   # [PaperMod] 将环境设置为生产，启用 google analytics、opengraph、twitter-cards 和 schema
   env: production
-  # [PaperMod] 网站描述
-  description: 叶落归处，清风自来
   # [PaperMod] 网站作者
   author: 叶都安
-  # [PaperMod] 首页关键字
-  keywords: [ 高效, 认真, 专业 ]
   # [PaperMod] 网站中日期字符串的格式。
-  dateFormat: 2006年1月2日
-  # [PaperMod] 设置昼夜主题，auto: 根据浏览器和系统
-  defaultTheme: auto
+  dateFormat: 2006-01-02
   # [PaperMod] 在博文元数据中显示阅读时间
   ShowReadingTime: true
   # [PaperMod] 显示博文下方的分享按钮
   ShowShareButtons: true
-  # [PaperMod] 在语言切换标题中的语言下显示语言名称
-  displayFullLangName: true
   # [PaperMod] 底部显示上/下一篇博文跳转链接
   ShowPostNavLinks: true
   # [PaperMod] 显示面包屑导航
   ShowBreadCrumbs: true
   # [PaperMod] 显示代码复制按钮
   ShowCodeCopyButtons: true
-  # [PaperMod] 在章节、术语和列表页面中显示 RSS 图标
-  ShowRssButtonInSectionTermList: true
-  ShowAllPagesInArchive: true
-  ShowPageNums: true
-  # [unknown] 显示文章更新时间
-  ShowLastMod: true
   # [PaperMod] 显示文章目录
   ShowToc: true
-  # [PaperMod] 启用评论
-  comments: true
-  # [unknown] 全局启用KaTeX解析公式
+  # [hugo] 全局启用数学公式解析
   math: true
+
+  # [PaperMod] 关于页设置
   profileMode:
+    # [PaperMod] 是否设置为首页（否，使用自定义页面实现）
     enabled: false
     title: 叶涟风不息 & 都安
-    subtitle: 叶落归处，清风自来
+    subtitle: 🐎清风拂叶，涟漪层叠，心宁致远🐍
     imageUrl: 叶子.jpg
-    imageTitle: 叶涟风不息 & 都安
-    # imageWidth: 120
-    # imageHeight: 120
-    # buttons:
-    # - name: Archives
-    # url: /archives
-    # - name: Tags
-    # url: /tags
 
+  # [PaperMod] 首页使用 Home-Info 模式，单独设置顶部内容
   homeInfoParams:
-    Title: 欢迎光临——叶落归处
-    Content: 落叶归处，方知本我
+    Title: 欢迎来到，叶子的博客
+    Content: 本人目前于东北林业大学攻读博士学位，主要研究方向为遥感解译，图像融合，高光谱变化检测，视频视觉关系识别。
 
+  # [PaperMod] 各平台图标
   socialIcons:
     - name: github
-      title: GitHub
       url: https://github.com/ylfbx329
     - name: bilibili
-      title: bilibili
       url: https://space.bilibili.com/38709472
-
-  # 编辑博文跳转链接
-  # editPost:
-  #   URL: "https://github.com/ylfbx329/ylfbx329.github.io/tree/master/content"
-  #   Text: "修改" # edit text
-  #   appendFilePath: true # to append file path to Edit link
-
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
-
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
+      # - name: googlescholar
+      # url: https://scholar.google.com/
+    # - name: rss
 
   assets:
-    disableHLJS: true
-    # 网站图标配置
+    # [PaperMod] 网站图标配置
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
     favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
-    disableFingerprinting: true # 修复Failed to find a valid digest in the 'integrity' attribute for resource
+    # [PaperMod] 关闭 Highlight.js 的代码高亮（使用 Hugo 的 Chroma）
+    disableHLJS: true
+    # [PaperMod] 设置为 true 可修复 Failed to find a valid digest in the 'integrity' attribute for resource
+    # disableFingerprinting: true
 
-  # cover:
-  #     hidden: true # hide everywhere but not in structured data
-  #     hiddenInList: true # hide on list pages and home
-  #     hiddenInSingle: true # hide on single page
-
-  # 搜索自定义配置
-  # fuseOpts:
-  #     isCaseSensitive: false
-  #     shouldSort: true
-  #     location: 0
-  #     distance: 1000
-  #     threshold: 0.4
-  #     minMatchCharLength: 0
-  #     keys: ["title", "permalink", "summary", "content"]
+# [PaperMod] 代码高亮相关
+# pygmentsUseClasses: false
 
 markup:
-  goldmark: # Hugo默认Markdown渲染库
+  # [hugo] Hugo 默认的 Markdown 渲染库
+  goldmark:
     renderer:
       unsafe: true
-      hardWraps: true # 渲染器渲染硬换行
+      # [hugo] 渲染器渲染硬换行（可在文章中使用<br>硬换行）
+      hardWraps: true
+    # [hugo] 全局启用KaTeX解析公式
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+            - - \[
+              - \]
+            - - $$
+              - $$
+          inline:
+            - - \(
+              - \)
+            - - $
+              - $
+        enable: true
+  
+  # [hugo] 代码高亮设置
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    guessSyntax: true
+    lineNos: true
+    style: github-dark
 
-# privacy:
-#   vimeo:
-#     disabled: false
-#     simple: true
-
-#   twitter:
-#     disabled: false
-#     enableDNT: true
-#     simple: true
-
-#   instagram:
-#     disabled: false
-#     simple: true
-
-#   youtube:
-#     disabled: false
-#     privacyEnhanced: true
-
-services:
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
-
+# [hugo] 文章分类
 taxonomies:
   category: categories
-  # tag: tags
+
+# [hugo] （与网站部署相关）图片缓存
+caches:
+  images:
+    dir: :cacheDir/images

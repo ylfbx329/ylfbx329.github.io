@@ -1,0 +1,21 @@
+/* 引入 JetBrains Mono 字体 */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Times New Roman", "LXGW WenKai", serif;
+}
+
+code,
+pre {
+  font-family: "JetBrains Mono", "LXGW WenKai Mono", monospace;
+  /* JetBrains Mono 优化 */
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

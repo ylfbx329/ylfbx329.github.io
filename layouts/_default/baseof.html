@@ -1,5 +1,5 @@
-{{- if lt hugo.Version "0.112.4" }}
-{{- errorf "=> hugo v0.112.4 or greater is required for hugo-PaperMod to build " }}
+{{- if lt hugo.Version "0.146.0" }}
+{{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
 {{- end -}}
 
 <!DOCTYPE html>
@@ -7,18 +7,12 @@
 
 <head>
     {{- partial "head.html" . }}
-    <!-- 自动扫描自定义css样式并链接 -->
-    {{- $cssFiles := resources.Match "css/*.{css,scss}" }}
-    {{- $processedCSS := slice }}
-    {{- range $cssFiles }}
-        {{- if eq (path.Ext .RelPermalink) ".scss" }}
-            {{- $processedCSS = $processedCSS | append ( . | toCSS | resources.Minify ) }}
-        {{- else }}
-            {{- $processedCSS = $processedCSS | append ( . | resources.Minify ) }}
-        {{- end }}
-    {{- end }}
-    {{- $mergedCSS := $processedCSS | resources.Concat "css/all-styles.css" }}
-    <link rel="stylesheet" href="{{ $mergedCSS.Permalink }}">
+
+    <!-- math start -->
+    {{ if .Param "math" }}
+        {{ partialCached "math.html" . }}
+    {{ end }}
+    <!-- math end -->
 </head>
 
 <body class="

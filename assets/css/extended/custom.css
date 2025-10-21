@@ -5,3 +5,8 @@
   /* 选中文本颜色 */
   color: #333333;
 }
+
+/* 代码高亮 */
+.chroma {
+  background-color: unset;
+}
