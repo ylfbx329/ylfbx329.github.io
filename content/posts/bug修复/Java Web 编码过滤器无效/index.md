@@ -2,7 +2,7 @@
 title: 'Java Web 编码过滤器无效'
 summary: 解决 Java Web 编码过滤器无效问题
 date: 2022-10-31T10:17:25+08:00
-categories: bug修复
+categories: Bug修复
 # draft: true
 ---
 # 问题描述

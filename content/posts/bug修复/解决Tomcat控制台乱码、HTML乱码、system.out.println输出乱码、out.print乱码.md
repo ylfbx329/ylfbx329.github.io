@@ -2,7 +2,7 @@
 title: 'Tomcat控制台乱码、HTML乱码、system.out.println输出乱码、out.print乱码'
 summary: 解决Tomcat控制台乱码、HTML乱码、system.out.println输出乱码、out.print乱码问题的详细教程
 date: 2023-06-20T11:06:59+08:00
-categories: bug修复
+categories: Bug修复
 # draft: true
 ---
 # 开发环境

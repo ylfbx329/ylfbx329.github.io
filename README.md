@@ -1,5 +1,11 @@
 # 个人网站源码存储库
 
+## 简要说明
+
+- Hugo 计划半年或一年更新一次
+- PaperMod 主题随时更新
+- `assets\css\extended`下css文件会自动加载
+
 ## 常用指令
 
 - 创建站点（指定配置文件为`yaml`格式）：`hugo new site <site-name> --format yaml`
@@ -11,7 +17,7 @@
   - 指定使用的配置文件：`hugo --config <name>.toml`
 - 更新主题：`git submodule update --remote --merge`
 - 合并配置文件，从左到右优先：`hugo --config a.toml,b.yaml,c.json`
-- `assets\css\extended`下css文件会自动加载
+- 生成 chroma 代码高亮 css：`hugo gen chromastyles --style=<style-name> > assets/css/extended/chroma.css`
 
 ## 实现功能
 
