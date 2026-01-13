@@ -7,7 +7,7 @@ languageCode: zh-cn
 # [hugo] 没有语言指示的内容将默认使用此语言，默认：en
 defaultContentLanguage: zh
 # [hugo] 网站标题
-title: 叶子的博客
+title: 叶子&都安的博客
 # [hugo] 网站主题，格式暂时不明（详见：https://gohugo.io/getting-started/configuration/#theme）
 theme: [ "PaperMod" ]
 
@@ -17,9 +17,9 @@ menus:
     - name: 博文
       pageRef: /
       weight: 10
-    # - name: 日记
-    #   pageRef: /diary
-    #   weight: 20
+    - name: 日记
+      pageRef: /diary
+      weight: 20
     - name: 分类
       pageRef: /categories
       weight: 30
@@ -72,8 +72,10 @@ params:
 
   # [PaperMod] 首页使用 Home-Info 模式，单独设置顶部内容
   homeInfoParams:
-    Title: 欢迎来到，叶子的博客
-    Content: 本人目前于东北林业大学攻读博士学位，主要研究方向为遥感解译，图像融合，高光谱变化检测，视频视觉关系识别。
+    Title: 欢迎来到，叶子&都安的博客
+    Content: |-
+      🐎叶子目前于东北林业大学攻读博士学位，主要研究方向为遥感解译，图像融合，高光谱变化检测，视频视觉关系识别。
+      🐍都安目前于山东大学攻读硕士学位，主要研究方向为时序预测。
 
   # [PaperMod] 各平台图标
   socialIcons:

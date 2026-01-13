@@ -2,7 +2,7 @@
 title: "十月，枫叶沙沙响，是我们在笑"
 summary: 金秋十月，金子般的我们
 date: 2024-10-07T16:47:03+08:00
-categories: 未分类
+categories: 日常记录
 # draft: true
 ---
 
