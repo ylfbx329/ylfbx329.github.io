@@ -38,31 +38,28 @@
           passthrough:
             delimiters:
               block:
-              - - \[
-                - \]
               - - $$
                 - $$
               inline:
-              - - \(
-                - \)
               - - $   # 自定义符号
                 - $
             enable: true
     ```
   - 创建`layouts\partials\math.html`
     ```html
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <script>
       MathJax = {
         tex: {
-          displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
-          inlineMath: [['\\(', '\\)'], ['$', '$']]      // inline // 自定义符号
+          displayMath: [['$$', '$$']],  // block
+          inlineMath: [['$', '$']],      // inline
+          tags: 'ams', // 自动编号
         },
         loader: {
           load: ['ui/safe']
         },
       };
     </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     ```
   - 在`layouts\_default\baseof.html`的`<head> </head>`中引入
     ```html
@@ -75,7 +72,7 @@
     </head>
     ```
 - [x] 自定义关于页
-  - 参考`themes\PaperMod\layouts\_default\list.html`中关于profileMode的渲染策略，创建`layouts\_default\profile.html`
+  - 参考`themes\PaperMod\layouts\list.html`中关于 profileMode 的渲染策略，创建`layouts\_default\profile.html`
     ```html
     {{- define "main" }}
     {{- partial "index_profile.html" . }}
