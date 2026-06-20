@@ -13,11 +13,7 @@ categories: 文献阅读
 
 ## 背景知识
 
-> 期望公式：
-> - 连续变量：$E[X] = \int xp(x)\mathrm{d}x$
-> - 函数：$E[g(X)] = \int g(x)p(x)\mathrm{d}x$
-> 
-> 高斯分布重参数化公式：$x \sim \mathcal{N}(\mu,\sigma^2) \Rightarrow x=\mu+\sigma\epsilon, \epsilon \sim \mathcal{N}(0,1)$
+> - 高斯分布重参数化公式：$x \sim \mathcal{N}(\mu,\sigma^2) \Rightarrow x=\mu+\sigma\epsilon, \epsilon \sim \mathcal{N}(0,1)$
 
 前向过程：
 $$
@@ -27,11 +23,11 @@ q(x_{1:T} \mid x_0) &:= \prod_{t=1}^T q(x_t \mid x_{t-1})\\
 q(x_t \mid x_{t-1}) &:= \mathcal{N}(x_t; \sqrt{1-\beta_t} x_{t-1}, \beta_t I)\\
 \end{aligned}
 $$
-令 $\alpha_t := 1-\beta_t$，$\bar{\alpha}_t := \prod_{s=1}^t \alpha_s$，有一步加噪公式：
+令 $\alpha_t := 1-\beta_t$，$\bar{\alpha}_t := \prod_{s=1}^t \alpha_s$，边缘分布为：
 $$
 q(x_t \mid x_0) := \mathcal{N}(x_t; \sqrt{\bar{\alpha}_t}x_0, (1-\bar{\alpha}_t)I)
 $$
-经重参数化后，采样公式为：
+经重参数化后，可得**一步加噪公式**为：
 $$
 x_t=\sqrt{\bar{\alpha}_t}x_0+\sqrt{1-\bar{\alpha}_t}\epsilon, \epsilon \sim \mathcal{N}(0,1)
 $$
@@ -46,6 +42,10 @@ p_\theta(x_{t-1} \mid x_t) &:= \mathcal{N}(x_{t-1}; \mu_\theta(x_t,t), \Sigma_\t
 $$
 
 ## 训练目标
+
+> 期望公式：
+> - 连续变量：$E[X] = \int xp(x)\mathrm{d}x$
+> - 函数：$E[g(X)] = \int g(x)p(x)\mathrm{d}x$
 
 $$
 \begin{aligned}
