@@ -78,6 +78,8 @@ x_{t-1} = \sqrt{\alpha_{t-1}}\cdot\frac{x_t-\sqrt{1-\alpha_t}\epsilon_\theta^{(t
 $$
 当 $\sigma_t=\sqrt{\frac{1-\alpha_{t-1}}{1-\alpha_t}}\sqrt{1-\frac{\alpha_t}{\alpha_{t-1}}}$ 时退回到 DDPM，当 $\sigma_t=0$ 时，为 DDIM
 
+此时已经消除了马尔可夫性质，所以可以用部分时间步序列 $\tau$ 进行采样，即式中 $t-1=\tau_{i-1},t=\tau_i (\tau_{i-1}<\tau_i-1)$
+
 > - 期望公式：
 >   - 连续变量：$E[X] = \int xp(x)\mathrm{d}x$
 >   - 函数：$E[g(X)] = \int g(x)p(x)\mathrm{d}x$

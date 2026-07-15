@@ -148,11 +148,29 @@ categories: 文献阅读
 
 ## 自然图像生成
 
+### ICCV 23 | Scalable Diffusion Models with Transformers
+
+> 论文链接：https://doi.org/10.1109/ICCV51070.2023.00387
+> 代码链接：https://www.wpeebles.com/DiT.html
+> 作者单位：加州大学伯克利分校
+
+### CVPR 22 | High-Resolution Image Synthesis with Latent Diffusion Models
+
+> 论文链接：https://doi.org/10.1109/CVPR52688.2022.01042
+> 代码链接：https://github.com/CompVis/latent-diffusion
+> 作者单位：慕尼黑大学
+
 ### ICLR 21 | Denoising Diffusion Implicit Models
 
 > 论文链接：https://openreview.net/forum?id=St1giarCHLP
 > 代码链接：https://github.com/ermongroup/ddim
 > 作者单位：斯坦福大学
+
+### ICML 21 | Improved denoising diffusion probabilistic models
+
+> 论文链接：http://proceedings.mlr.press/v139/nichol21a.html
+> 代码链接：https://github.com/openai/improved-diffusion
+> 作者单位：OpenAI
 
 ### NeurIPS 20 | Denoising Diffusion Probabilistic Models
 
