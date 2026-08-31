@@ -124,6 +124,12 @@ categories: 文献阅读
 
 - 模型：点+点描述作为条件生成遥感图像，以DiT为主体架构，对注意力模块进行修改
 
+### TGRS 25 | MMO-IG: Multiclass and Multiscale Object Image Generation for Remote Sensing
+
+> 论文链接：https://doi.org/10.1109/TGRS.2025.3550404
+> 代码链接：https://github.com/omtcyang/MMO-IG
+> 作者单位：西北工业大学
+
 ## 自然图像变化生成
 
 ### WACV 25 | Improving Zero-Shot Object-Level Change Detection by Incorporating Visual Correspondence
@@ -147,6 +153,12 @@ categories: 文献阅读
 - 数据：COCO-Inpainted
 
 ## 自然图像生成
+
+### ICCV 23 | Adding Conditional Control to Text-to-Image Diffusion Models
+
+> 论文链接：https://doi.org/10.1109/ICCV51070.2023.00355
+> 代码链接：https://github.com/lllyasviel/controlnet
+> 作者单位：斯坦福大学
 
 ### ICCV 23 | Scalable Diffusion Models with Transformers
 
