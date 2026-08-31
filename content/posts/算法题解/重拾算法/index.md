@@ -1,4 +1,10 @@
-# Hello 算法
+---
+title: '《Hello 算法》阅读笔记'
+summary: 记录基础数据结构与算法知识，供翻阅查找
+date: 2026-08-18T08:00:00+08:00
+categories: 算法题解
+# draft: true
+---
 
 ## 复杂度分析
 
