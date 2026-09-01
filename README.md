@@ -99,12 +99,12 @@
     markup:
       # [hugo] 代码高亮设置
       highlight:
-        noClasses: false
         guessSyntax: true
         lineNos: true
+        noClasses: false
         style: github-dark
     ```
-  - 生成css`hugo gen chromastyles --style=github-dark  > assets/css/extended/chroma.css`
+  - 生成css`hugo gen chromastyles --style=github-dark  > assets/css/includes/chroma-styles.css`
   - 自定义css
     ```css
     .chroma {

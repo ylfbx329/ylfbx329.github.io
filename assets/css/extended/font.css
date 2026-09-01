@@ -14,8 +14,10 @@ body {
 code,
 pre {
   font-family: "JetBrains Mono", "LXGW WenKai Mono", monospace;
-  /* JetBrains Mono 优化 */
+  /* 启用标准连字和上下文替代字形 */
   -webkit-font-feature-settings: "liga" on, "calt" on;
+  /* 平滑文字边缘 */
   -webkit-font-smoothing: antialiased;
+  /* 优先保证可读性 */
   text-rendering: optimizeLegibility;
 }
