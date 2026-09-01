@@ -7,6 +7,7 @@
 }
 
 /* 代码高亮 */
+/* 固定使用 PaperMod 的深色背景，导致无法使用具有浅色背景的代码高亮风格，烦人的特性 bug */
 .chroma {
   background-color: unset;
 }

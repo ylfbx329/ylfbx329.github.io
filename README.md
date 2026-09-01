@@ -17,7 +17,7 @@
   - 指定使用的配置文件：`hugo --config <name>.toml`
 - 更新主题：`git submodule update --remote --merge`
 - 合并配置文件，从左到右优先：`hugo --config a.toml,b.yaml,c.json`
-- 生成 chroma 代码高亮 css：`hugo gen chromastyles --style=<style-name> > assets/css/extended/chroma.css`
+- 生成 chroma 代码高亮 css：`hugo gen chromastyles --style=<style-name> > assets/css/includes/chroma-styles.css`
 
 ## 实现功能
 
@@ -117,7 +117,7 @@
   - 引入字体
     - 在`layouts\partials\extend_head.html`引入霞鹜文楷
       ```html
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont/style.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css" />
       ```
     - 在`assets\css\extended\font.css`引入 JetBrains Mono
       ```css
@@ -138,9 +138,11 @@
       code,
       pre {
         font-family: "JetBrains Mono", "LXGW WenKai Mono", monospace;
-        /* JetBrains Mono 优化 */
+        /* 启用标准连字和上下文替代字形 */
         -webkit-font-feature-settings: "liga" on, "calt" on;
+        /* 平滑文字边缘 */
         -webkit-font-smoothing: antialiased;
+        /* 优先保证可读性 */
         text-rendering: optimizeLegibility;
       }
       ```

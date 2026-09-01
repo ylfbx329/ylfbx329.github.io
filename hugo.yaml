@@ -123,9 +123,11 @@ markup:
   
   # [hugo] 代码高亮设置
   highlight:
-    noClasses: false
     guessSyntax: true
     lineNos: true
+    # 解决行号与代码不连贯
+    noClasses: false
+    # 仅作标识，不起作用，实际依赖 hugo gen chromastyles 指定的样式
     style: github-dark
 
 # [hugo] 文章分类
