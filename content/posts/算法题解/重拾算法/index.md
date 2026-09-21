@@ -448,4 +448,134 @@ n1.left = n2
   ```
   该实现的返回结果中包含 `None`，若不想包含则将 `dfs()` 的终止条件换成 `if i >= len(arr) or arr[i] is None:`
 
+### 二叉搜索树
+
+定义
+- 对于根节点，左子树中所有节点的值 < 根节点的值 < 右子树中所有节点的值
+- 且任意节点的左、右子树也是二叉搜索树
+- 注意：二叉搜索树不允许有重复节点
+- 性质：中序遍历序列为升序
+
+查找节点 $O(\log n)$
+```py
+def search(root: TreeNode, num: int) -> TreeNode | None:
+    """查找节点"""
+    cur = root
+    # 循环查找，越过叶节点后跳出
+    while cur is not None:
+        # 目标节点在 cur 的右子树中
+        if cur.val < num:
+            cur = cur.right
+        # 目标节点在 cur 的左子树中
+        elif cur.val > num:
+            cur = cur.left
+        # 找到目标节点，跳出循环
+        else:
+            break
+    return cur
+```
+
+插入节点 $O(\log n)$
+- 二叉搜索树不允许存在重复节点，否则将违反其定义。因此，若待插入节点在树中已存在，则不执行插入，直接返回
+- 为了实现插入节点，我们需要借助节点 `pre` 保存上一轮循环的节点。这样在遍历至 `None` 时，我们可以获取到其父节点，从而完成节点插入操作
+```py
+def insert(root: TreeNode | None, num: int) -> TreeNode:
+    """插入节点"""
+    # 若树为空，则初始化根节点
+    if root is None:
+        root = TreeNode(num)
+        return root
+    # 循环查找，越过叶节点后跳出
+    cur, pre = root, None
+    while cur is not None:
+        # 找到重复节点，直接返回
+        if cur.val == num:
+            return root
+        pre = cur
+        # 插入位置在 cur 的右子树中
+        if cur.val < num:
+            cur = cur.right
+        # 插入位置在 cur 的左子树中
+        else:
+            cur = cur.left
+    # 插入节点
+    node = TreeNode(num)
+    if pre.val < num:
+        pre.right = node
+    else:
+        pre.left = node
+    return root
+```
+
+删除节点 $O(\log n)$
+- 当待删除节点度为 $0$ 时：直接删除
+- 当待删除节点度为 $1$ 时：将待删除节点替换为其子节点
+- 当待删除节点度为 $2$ 时：将待删除节点替换为右子树的最小节点或左子树的最大节点，择一即可
+
+```py
+def remove(root: TreeNode | None, num: int) -> TreeNode | None:
+    """删除节点"""
+    # 若树为空，直接提前返回
+    if root is None:
+        return root
+    # 循环查找，越过叶节点后跳出
+    cur, pre = root, None
+    while cur is not None:
+        # 找到待删除节点，跳出循环
+        if cur.val == num:
+            break
+        pre = cur
+        # 待删除节点在 cur 的右子树中
+        if cur.val < num:
+            cur = cur.right
+        # 待删除节点在 cur 的左子树中
+        else:
+            cur = cur.left
+    # 若无待删除节点，则直接返回
+    if cur is None:
+        return root
+
+    # 子节点数量 = 0 or 1
+    if cur.left is None or cur.right is None:
+        # 当子节点数量 = 0 / 1 时， child = null / 该子节点
+        child = cur.left or cur.right
+        # 删除节点 cur
+        if cur != root:
+            if pre.left == cur:
+                pre.left = child
+            else:
+                pre.right = child
+        else:
+            # 若删除节点为根节点，则重新指定根节点
+            root = child
+    # 子节点数量 = 2
+    else:
+        # 获取中序遍历中 cur 的下一个节点
+        tmp: TreeNode = cur.right
+        while tmp.left is not None:
+            tmp = tmp.left
+        # 用 tmp 覆盖 cur
+        cur.val = tmp.val
+        # 递归删除节点 tmp
+        # 必须使用 cur.right 接回返回值，因为当删除的是根节点时不接回会导致删除失效
+        cur.right = remove(cur.right, tmp.val)
+    return root
+```
+
+### AVL 树
+
+动机：防止二叉搜索树在多次插入和删除后退化为链表
+
+定义：既是二叉搜索树，又是平衡二叉树，即平衡二叉搜素树
+
+概念
+- 节点高度：从该节点到它的最远叶节点的距离，即所经过的“边”的数量
+  - 叶节点高度为 $0$，空节点高度为 $-1$
+- 节点的平衡因子：左子树的高度减去右子树的高度，空节点平衡因子为 $0$
+  - 设平衡因子为 $f$，则 AVL 树的任意节点满足 $-1 \le f \le 1$
+- 失衡节点：平衡因子绝对值 $\ge 1$ 的节点
+
+AVL 树旋转
+在保持二叉搜索树的性质的前提下，使树重新变为平衡二叉树
+
 ## 算法

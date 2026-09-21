@@ -172,6 +172,11 @@ categories: 文献阅读
 > 代码链接：https://github.com/CompVis/latent-diffusion
 > 作者单位：慕尼黑大学
 
+### NeurIPS 21 Workshop | Classifier-Free Diffusion Guidance
+
+> 论文链接：https://doi.org/10.48550/arXiv.2207.12598
+> 作者单位：谷歌研究院
+
 ### ICLR 21 | Denoising Diffusion Implicit Models
 
 > 论文链接：https://openreview.net/forum?id=St1giarCHLP

@@ -87,15 +87,13 @@
     ```
 - [x] 修复面包屑导航翻译不完全的bug
   - 创建`content\posts\_index.md`设置title
-- [ ] 代码高亮（未完全实现）
+- [x] 代码高亮
   - 相关设置
     ```yaml
     params:
       assets:
         # [PaperMod] 关闭 Highlight.js 的代码高亮（使用 Hugo 的 Chroma）
         disableHLJS: true
-    # [PaperMod] 代码高亮相关
-    # pygmentsUseClasses: false
     markup:
       # [hugo] 代码高亮设置
       highlight:
