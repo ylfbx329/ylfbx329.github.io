@@ -3,7 +3,7 @@
 # [hugo] 您发布的网站的绝对 URL（协议、主机、路径和尾随斜杠）（e.g., https://www.example.org/docs/）
 baseURL: https://ylfbx329.github.io/
 # [hugo] RFC 5646 定义的语言标签，用于填充
-languageCode: zh-cn
+locale: zh-cn
 # [hugo] 没有语言指示的内容将默认使用此语言，默认：en
 defaultContentLanguage: zh
 # [hugo] 网站标题

@@ -157,34 +157,30 @@ class Solution:
 
 Python 实现列表基础操作
 ```py
-# 初始化列表
-nums1: list[int] = [] # 无初始值
-nums: list[int] = [1, 3, 2, 5, 4] # 有初始值
+# 初始化
+nums: list[int] = []               # 无初始值
+nums: list[int] = [1, 3, 2, 5, 4]  # 有初始值
+n = 10
+nums: list[int] = [0] * n          # 扩展初始值
 
 # 访问元素
 num: int = nums[1]  # 访问索引 1 处的元素
 
-# 更新元素
-nums[1] = 0    # 将索引 1 处的元素更新为 0
-
-# 在尾部添加元素
-nums.append(1)
-# 在中间插入元素
-nums.insert(3, 6)  # 在索引 3 处插入数字 6
+# 添加元素
+nums.append(1)     # 在尾部添加
+nums.insert(3, 6)  # 在中间插入，在索引 3 处插入数字 6
 
 # 删除元素
-nums.pop(3)        # 删除索引 3 处的元素
-# 清空列表
-nums.clear()
+nums.pop(3)  # 删除索引 3 处的元素
 
-# 遍历列表
-# 通过索引遍历列表
-count = 0
-for i in range(len(nums)):
-    count += nums[i]
-# 直接遍历列表元素
-for num in nums:
-    count += num
+# 更新元素
+nums[1] = 0  # 将索引 1 处的元素更新为 0
+
+# 遍历元素
+for i in range(len(nums)):  # 通过索引遍历
+    print(nums[i])
+for num in nums:            # 直接遍历
+    print(num)
 
 # 拼接列表
 nums1: list[int] = [6, 8, 7, 10, 9]
@@ -192,29 +188,31 @@ nums += nums1  # 将列表 nums1 拼接到 nums 之后
 
 # 排序列表
 nums.sort()  # 元素从小到大排列
+
+# 清空列表
+nums.clear()
 ```
 
 ### 栈
 
 Python 实现栈基础操作
 ```py
-# 初始化栈
-# Python 没有内置的栈类，可以把 list 当作栈来使用
-stack: list[int] = []
-
-# 元素入栈
-stack.append(1)
+# 初始化
+stack: list[int] = []  # Python 没有内置的栈类，可以把 list 当作栈来使用
 
 # 访问栈顶元素
 peek: int = stack[-1]
 
-# 元素出栈
+# 入栈
+stack.append(1)
+
+# 出栈
 pop: int = stack.pop()
 
 # 获取栈的长度
 size: int = len(stack)
 
-# 判断是否为空
+# 判断栈是否为空
 is_empty: bool = len(stack) == 0
 ```
 
@@ -224,18 +222,18 @@ Python 实现队列基础操作
 ```py
 from collections import deque
 
-# 初始化队列
+# 初始化
 # 在 Python 中，我们一般将双向队列类 deque 当作队列使用
 # 虽然 queue.Queue() 是纯正的队列类，但实际定位是协调任务的消息队列，作为数据结构不太好用，因此不推荐
 que: deque[int] = deque()
 
-# 元素入队
-que.append(1)
-
 # 访问队首元素
 front: int = que[0]
 
-# 元素出队
+# 入队
+que.append(1)
+
+# 出队
 pop: int = que.popleft()
 
 # 获取队列的长度
@@ -251,16 +249,16 @@ Python 实现双向队列基础操作
 ```py
 from collections import deque
 
-# 初始化双向队列
+# 初始化
 deq: deque[int] = deque()
-
-# 元素入队
-deq.append(1)      # 添加至队尾
-deq.appendleft(1)  # 添加至队首
 
 # 访问元素
 front: int = deq[0]  # 队首元素
 rear: int = deq[-1]  # 队尾元素
+
+# 元素入队
+deq.append(1)      # 添加至队尾
+deq.appendleft(1)  # 添加至队首
 
 # 元素出队
 pop_front: int = deq.popleft()  # 队首元素出队
@@ -277,30 +275,24 @@ is_empty: bool = len(deq) == 0
 
 Python 实现哈希表基础操作
 ```py
-# 初始化哈希表
+# 初始化
 hmap: dict = {}
 
-# 添加操作
-# 在哈希表中添加键值对 (key, value)
+# 访问元素
+name: str = hmap[15937]  # 访问 key 为 15937 的 value
+
+# 添加元素
 hmap[12836] = "小哈"
 
-# 查询操作
-# 向哈希表中输入键 key ，得到值 value
-name: str = hmap[15937]
-
-# 删除操作
-# 在哈希表中删除键值对 (key, value)
+# 删除元素
 hmap.pop(10583)
 
-# 遍历哈希表
-# 遍历键值对 key->value
-for key, value in hmap.items():
+# 遍历元素
+for key, value in hmap.items():  # 遍历键值对 key->value
     print(key, "->", value)
-# 单独遍历键 key
-for key in hmap.keys():
+for key in hmap.keys():          # 单独遍历键 key
     print(key)
-# 单独遍历值 value
-for value in hmap.values():
+for value in hmap.values():      # 单独遍历值 value
     print(value)
 ```
 
@@ -321,7 +313,7 @@ class TreeNode:
         self.left: TreeNode | None = None  # 左子节点引用
         self.right: TreeNode | None = None # 右子节点引用
 
-# 初始化二叉树
+# 初始化
 # 初始化节点
 n1 = TreeNode(val=1)
 n2 = TreeNode(val=2)

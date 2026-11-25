@@ -175,7 +175,7 @@ categories: 文献阅读
 ### NeurIPS 21 Workshop | Classifier-Free Diffusion Guidance
 
 > 论文链接：https://doi.org/10.48550/arXiv.2207.12598
-> 作者单位：谷歌研究院
+> 作者单位：Google Research, Brain team
 
 ### ICLR 21 | Denoising Diffusion Implicit Models
 
